@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #B2D8E4 !important;
+    position: relative;
+    color: #104469;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 70px;
+    top: 0;
+    position: fixed;
+    z-index: 1px;
+    padding: 10px 0;
+    /* flex-wrap: wrap; 🌻🌻🌻🌻*/ 
+  }
+  
+  .navbar,
+  .nav-pages,
+  .hide-nav-pages,
+  .social-icons {
+    display: flex;
+  }
+  .nav-toggle {
+    background-color: #ee8181;
+    padding: 13px 10px 7px;
+    font-size: 20px;
+    color: #fff;
+    width: 50px;
+    text-align: center;
+    border-radius: 2px;
+  }
+  .social-icons ul a {
+    display: inline-block;
+    color: #0e6a89;
+    font-size: 25px;
+    margin: 5px 10px;
+  }
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    flex-wrap: wrap;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .row {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .col {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .col-4 {
+    width: 33.3333%;
+  }
+  .col-8 {
+    width: 66.6667%;
+  }
+  .description{
+      padding-top: 30px;
+      text-align: justify;
+      font-size: 20px;
+  }
+  
+  /* ------------banner */
+  #banner {
+    padding: 30px 5px 0px;
+    height: fit-content;
+    background-color: #b2d8e4;
+    flex-wrap: nowrap;
+  }
+  #banner .text {
+    margin: 8%;
+    display: inline-block;
+    text-align: center;
+    z-index: 1px;
+    position: absolute;
+    color: #104469;
+  }
+  #banner .text p {
+    margin: 20px 0 10px;
+  }
+  #banner .text .heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 3px;
+    line-height: 36px;
+  }
+  #banner .text .detail {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  #banner .text hr {
+    margin: 0 auto;
+    width: 30%;
+    color: #0e6a89;
+  }
+  #banner img {
+    width: 100%;
+    object-fit: cover;
+  }
+  /* ----------------------About */
+  #about {
+      background-color: #fff;
+      z-index: 100px;
+      width: 100%;
+      margin: 0 auto;
+  }
+  .intro {
+    width: 100%;
+    text-align: center;
+    color: #104469;
+    padding: 20px;
+  }
+  .intro .heading {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .intro .detail {
+      margin-top: 5px;
+    font-size: 16px;
+    font-style: italic;
+  }
+  .intro hr {
+    width: 12%;
+    margin: 0 auto;
+  }
+  
+  .me img {
+    max-height: 50vh;
+    width: 100%;
+    border-radius: 10px;
+  }
+  /* -------------------------------Projects */
+  #project {
+      background-color: #104469;
+  }
+  #project .intro{
+      color: #fff;
+  }
+  /* ------------------ responsive */
+  @media screen and (min-width: 768px) {
+    .navbar .nav-toggle {
+      display: none;
+    }
+    .navbar,
+    .nav-pages,
+    .hide-nav-pages,
+    .social-icons {
+      flex-direction: row;
+      justify-content: right;
+    }
+    .nav-pages,
+    .hide-nav-pages,
+    .social-icons {
+      margin-right: 3%;
+    }
+  
+    .nav-pages ul,
+    .hide-nav-pages ul {
+      margin: 5px 15px;
+    }
+    .nav-pages ul a,
+    .hide-nav-pages ul a {
+      padding: 10px 15px;
+      font-size: 15px;
+      text-transform: uppercase;
+      background-color: #ee8181;
+      height: fit-content;
+      border-radius: 45px;
+      letter-spacing: 2px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .nav-pages ul a:hover,
+    .hide-nav-pages ul a:hover {
+      background-color: #0e6a89;
+    }
+    #banner .text {
+      width: 40%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .navbar {
+      height: 300px;
+      width: 50%;
+      right: 10px;
+    }
+    .navbar,
+    .nav-pages {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .nav-pages ul {
+      margin: 15px 0;
+    }
+    .hide-nav-pages {
+      display: none;
+    }
+    .social-icons {
+      display: none;
+    }
+    #banner .text {
+      width: 100%;
+    }
+  }
+  

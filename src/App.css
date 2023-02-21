@@ -1,38 +1,420 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #b2d8e4 !important;
+  color: #104469;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 18px;
+}
+img {
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section .container{
+  padding-top: 46px;
+  padding-bottom: 30px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --------common------ */
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
+}
+.header {
+  padding: 8px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(255,255,255, 0.05);
+}
+.navbar {
+  display: flex;
+  width: 100%;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar {
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  margin: 0 auto;
+}
+/* --------------SELF-DEFINE ATTRIBUTE ---------- */
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* ---------------COMMON COMPONENTS🌻🌻🌻 --------------- */
+.intro {
+  width: 100%;
+  text-align: center;
+  color: #104469;
+  padding: 20px;
+}
+.intro .heading {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 600;
+}
+.intro hr {
+  width: 12%;
+  margin: 0 auto;
+}
+.intro .detail {
+  margin-top: 5px;
+  font-size: 16px;
+  font-style: italic;
+}
+/* ---------------NAVIGATION BAR 🌻🌻🌻 --------------- */
+.nav-pages,
+.hide-nav-pages,
+.social-icons {
+  display: flex;
+}
+.social-icons a:hover{
+  font-size: 20px;
+}
+.nav-toggle {
+  display: none;
+}
+.nav-pages ul,
+.hide-nav-pages ul {
+  margin: 5px 15px;
+}
+.nav-pages ul a,
+.hide-nav-pages ul a {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  border-radius: 45px;
+  padding: 10px 15px;
+  background-color: #ee8181;
+}
+.nav-pages ul a:hover,
+.hide-nav-pages ul a:hover {
+  background-color: #0e6a89;
+}
+.social-icons ul a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  color: #0e6a89;
+  font-size: 25px;
+  margin: 5px 10px;
+}
+/* ---------------BANNER 🌻🌻🌻 --------------- */
+#banner .container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding: 70px 5px 0px;
+  height: 100vh;
+  max-height: 768px;
+  position: relative;
+}
+#banner img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+#banner .intro {
+  margin-bottom: 20vh;
+}
+#banner .intro .heading {
+  letter-spacing: 3px;
+  font-size: 32px;
+}
+#banner .intro .detail {
+  font-size: 18px;
+  margin-top: 15px;
+}
+/* ---------------ABOUT 🌻🌻🌻 --------------- */
+#about {
+  background-color: #fff;
+  width: 100%;
+}
+.about-img{
+  width: 33%;
+  padding: 12px;
+  object-fit: cover;
+  aspect-ratio: 5/6;
+  border-radius: 20px;
+}
+#about .info {
+  text-align: justify;
+  padding: 12px;
+  margin-top: 20px;
+}
+.cv-btn {
+  display: block;
+  width: fit-content;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  background-color: #ee8181;
+  margin: 15px auto;
+}
+.cv-btn:hover{
+  box-shadow: 5px 5px 5px rgba(182, 77, 77, 0.5);
+}
+/* ----------------PROJECT 🌻🌻🌻---------------- */
+#projects {
+  background-color: #104469;
+}
+#projects .intro{
+  color: #fff;
+}
+.projects-grid{
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: -12px;
 }
-
-.App-link {
-  color: #61dafb;
+.project-wrapper {
+  display: inline-block;
+  padding: 12px 0 12px 24px;
+  width: 33.33%;
+  min-width: 340px;
 }
+.project-inner{
+  border-radius: 10px;
+  background-color: #D7E8EE;
+  padding: 28px 18px 18px;
+  box-shadow: 0px 0px 15px rgba(18, 18, 18, 0.5);
+}
+.project-image {
+  position: relative;
+  display: flex;
+  width: 100%;
+  aspect-ratio: 5/3;
+}
+.project-image:hover .project-script{
+  background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+  opacity:1;
+}
+.project-image img{
+  object-fit: cover;
+  background-color: #ffffff;
+}
+.project-script{
+  padding: 25px;
+  transition: 0.3s ease-in-out;
+  font-weight: 400;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  text-decoration: none;
+}
+.project-info .project-heading{
+  margin-top: 20px;
+  color: #47ACCF;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 1px #47ACCF;
+}
+.project-info .project-skills{
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  font-size: 15px;
+}
+.project-info .project-skill{
+  display: inline-block;
+  padding: 2px;
+  margin: 3px;
+  line-height: 15px;
+  border-radius: 3px;
+  color: #0E6A89;
+}
+.project-show{
+  display: block;
+  text-align: center;
+  width: 55%;
+  margin: 20px auto 0;
+  background-color: #ee8181;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.project-show:hover{
+  box-shadow: 5px 5px 5px rgba(182, 77, 77, 0.5);
+}
+/* ---------------CONTACTS 🌻🌻🌻------------------ */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#contact .contact-info{
+  width: 48%;
+  display: inline-block;
+  text-align: center;
+  padding: 12px;
+  margin: 20px auto 0;
+}
+#contact a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  background-color: #47ACCF;
+  padding: 40px;
+  font-weight: 400;
+  font-size: 20px;
+}
+#contact a:hover{
+  color: #Fff;
+  background-image: linear-gradient(-45deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+}
+.i-contact {
+  margin: 0 15px 15px 0;
+  aspect-ratio: 1;
+  line-height: 20px;
+  display: inline-block;
+}
+/* ---------------Footer 🌻🌻🌻 --------------- */
+.footer{
+  padding: 20px 0;
+  /* background-color: #fff; */
+  width: 100%;
+}
+.footer .social-icons{
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.footer ::before{
+  content: "";
+  height: 8px;
+  width: 100%;
+  background-color: #0E6A89;
+}
+.footer ::after{
+  content: "";
+  height: 8px;
+  width: 100%;
+  background-color: #0E6A89;
+}
+.footer .copyright {
+  text-align: center;
+  margin: 10px 0;
+  color: #000;
+  font-size: 15px;
+}
+.footer .more{
+  text-align: center;
+  margin: auto;
+  color: #000;
+  font-size: 8px;
+}
+/* ---------------RESPONSIVE 🌻🌻🌻 --------------- */
+@media screen and (min-width: 1024px) {
+  .pl {
+    padding: 0 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .hide-nav-pages {
+    display: none;
+  }
+  .nav-pages {
+    display: block;
+  }
+  .social-icons {
+    display: none;
+  }
+  .ps {
+    padding: 0 1rem;
+  }
+  .navbar {
+    width: fit-content;
+    margin-top: 2px;
+    margin-right: 2px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #ee8181;
+    border-radius: 8px;
+  }
+  .nav-toggle {
+    display: block;
+    width: 60px;
+    padding: 13px 10px 7px;
+    text-align: center;
+    background-color: #ee8181;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 8px;
+  }
+  .nav-pages,
+  .nav-pages ul,
+  .nav-pages ul a {
+    width: 100%;
+  }
+  .nav-pages ul {
+    margin: 0;
+  }
+  .nav-pages ul a {
+    display: block;
+    padding: 20px 50px;
+    border-radius: 8px;
+  }
+  #about .row {
+    align-items: center;
+    flex-direction: column;
+  } 
+  .about-img{
+    display: block;
+    width: 40%;
+    aspect-ratio: 3/4;
+  }
+  #contact .row{
+    flex-direction: column;
+  }
+  #contact .contact-info{
+    width: 100%;
+    margin-top: 0;
   }
 }
